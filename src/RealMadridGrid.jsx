@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { JERSEY_URLS, LEAGUE_URLS } from './azure-config';
+import { JERSEY_URLS, LEAGUE_URLS } from './azure-config.js';
 import './RealMadridGrid.css';
 
 const RealMadridGrid = () => {
