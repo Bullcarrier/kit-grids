@@ -17,19 +17,19 @@ const RealMadridGrid = () => {
 
   const jerseys = {
     home: {
-      src: './la_liga_jerseys/real_madrid/home_2025.webp',
+      src: 'https://kitgridsstorage.blob.core.windows.net/jerseys/home_2025.webp',
       alt: 'Real Madrid Home Jersey 2025',
       color: 'white',
       name: 'Home'
     },
     away: {
-      src: './la_liga_jerseys/real_madrid/away_2025.webp',
+      src: 'https://kitgridsstorage.blob.core.windows.net/jerseys/away_2025.webp',
       alt: 'Real Madrid Away Jersey 2025',
       color: 'black',
       name: 'Away'
     },
     third: {
-      src: './la_liga_jerseys/real_madrid/third_2025.webp',
+      src: 'https://kitgridsstorage.blob.core.windows.net/jerseys/third_2025.webp',
       alt: 'Real Madrid Third Jersey 2025',
       color: 'blue',
       name: 'Third'
@@ -37,17 +37,17 @@ const RealMadridGrid = () => {
   };
 
   const leagues = {
-    gb1: { name: 'Premier League', country: 'England', logo: 'gb1_logo.png', flag: 'gb1_flag.png' },
-    es1: { name: 'La Liga', country: 'Spain', logo: 'es1_logo.png', flag: 'es1_flag.png' },
-    l1: { name: 'Bundesliga', country: 'Germany', logo: 'l1_logo.png', flag: 'l1_flag.png' },
-    it1: { name: 'Serie A', country: 'Italy', logo: 'it1_logo.png', flag: 'it1_flag.png' },
-    fr1: { name: 'Ligue 1', country: 'France', logo: 'fr1_logo.png', flag: 'fr1_flag.png' },
-    nl1: { name: 'Eredivisie', country: 'Netherlands', logo: 'nl1_logo.png', flag: 'nl1_flag.png' },
-    tr1: { name: 'Süper Lig', country: 'Turkey', logo: 'tr1_logo.png', flag: 'tr1_flag.png' },
-    sa1: { name: 'Saudi Pro League', country: 'Saudi Arabia', logo: 'sa1_logo.png', flag: 'sa1_flag.png' },
-    cl: { name: 'UEFA Champions League', country: 'UEFA', logo: 'cl_logo.png', flag: 'cl_flag.png' },
-    el: { name: 'UEFA Europa League', country: 'UEFA', logo: 'el_logo.png', flag: 'el_flag.png' },
-    ucol: { name: 'UEFA Conference League', country: 'UEFA', logo: 'ucol_logo.png', flag: 'ucol_flag.png' }
+    gb1: { name: 'Premier League', country: 'England', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/gb1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/gb1_flag.png' },
+    es1: { name: 'La Liga', country: 'Spain', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/es1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/es1_flag.png' },
+    l1: { name: 'Bundesliga', country: 'Germany', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/l1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/l1_flag.png' },
+    it1: { name: 'Serie A', country: 'Italy', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/it1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/it1_flag.png' },
+    fr1: { name: 'Ligue 1', country: 'France', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/fr1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/fr1_flag.png' },
+    nl1: { name: 'Eredivisie', country: 'Netherlands', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/nl1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/nl1_flag.png' },
+    tr1: { name: 'Süper Lig', country: 'Turkey', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/tr1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/tr1_flag.png' },
+    sa1: { name: 'Saudi Pro League', country: 'Saudi Arabia', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/sa1_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/sa1_flag.png' },
+    cl: { name: 'UEFA Champions League', country: 'UEFA', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/cl_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/cl_flag.png' },
+    el: { name: 'UEFA Europa League', country: 'UEFA', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/el_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/el_flag.png' },
+    ucol: { name: 'UEFA Conference League', country: 'UEFA', logo: 'https://kitgridsstorage.blob.core.windows.net/leagues/logos/ucol_logo.png', flag: 'https://kitgridsstorage.blob.core.windows.net/leagues/flags/ucol_flag.png' }
   };
 
   const handleJerseyChange = useCallback((jerseyIndex, jerseyType) => {
