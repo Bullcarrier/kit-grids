@@ -3,6 +3,7 @@ import JerseyGrid from './JerseyGrid';
 import InteractiveJersey from './InteractiveJersey';
 import RealMadridJersey from './RealMadridJersey';
 import RealMadridGrid from './RealMadridGrid';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
       </main>
 
       {/* Footer removed as requested */}
+      <Analytics />
     </div>
   );
 }
