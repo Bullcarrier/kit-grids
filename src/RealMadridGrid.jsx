@@ -32,10 +32,7 @@ const RealMadridGrid = () => {
     fr1: { name: 'Ligue 1', country: 'France', logo: LEAGUE_URLS.logos.fr1, flag: LEAGUE_URLS.flags.fr1 },
     nl1: { name: 'Eredivisie', country: 'Netherlands', logo: LEAGUE_URLS.logos.nl1, flag: LEAGUE_URLS.flags.nl1 },
     tr1: { name: 'Süper Lig', country: 'Turkey', logo: LEAGUE_URLS.logos.tr1, flag: LEAGUE_URLS.flags.tr1 },
-    sa1: { name: 'Saudi Pro League', country: 'Saudi Arabia', logo: LEAGUE_URLS.logos.sa1, flag: LEAGUE_URLS.flags.sa1 },
-    cl: { name: 'UEFA Champions League', country: 'UEFA', logo: LEAGUE_URLS.logos.cl, flag: LEAGUE_URLS.flags.cl },
-    el: { name: 'UEFA Europa League', country: 'UEFA', logo: LEAGUE_URLS.logos.el, flag: LEAGUE_URLS.flags.el },
-    ucol: { name: 'UEFA Conference League', country: 'UEFA', logo: LEAGUE_URLS.logos.ucol, flag: LEAGUE_URLS.flags.ucol }
+    sa1: { name: 'Saudi Pro League', country: 'Saudi Arabia', logo: LEAGUE_URLS.logos.sa1, flag: LEAGUE_URLS.flags.sa1 }
   };
 
   const handleJerseyChange = useCallback((jerseyIndex, jerseyType) => {
