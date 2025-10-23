@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { TEAM_CONFIGS, LEAGUE_TEAMS, LEAGUE_URLS } from './azure-config.js';
+import { TEAM_CONFIGS, LEAGUE_TEAMS, LEAGUE_URLS, LOGO_URL } from './azure-config.js';
 import './RealMadridGrid.css';
 
 const RealMadridGrid = () => {
@@ -190,7 +190,13 @@ const RealMadridGrid = () => {
   return (
     <div className="real-madrid-grid-container">
       <div className="logo-section">
-        <div className="kit-grids-logo">KIT GRIDS</div>
+        <div className="kit-grids-logo">
+          <img 
+            src={LOGO_URL} 
+            alt="Kit Grids Logo" 
+            className="logo-image"
+          />
+        </div>
         
         <div className="league-selector">
           <div className="league-selector-title">Select League</div>

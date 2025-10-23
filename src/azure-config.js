@@ -5,7 +5,8 @@ export const AZURE_CONFIG = {
   baseUrl: 'https://kitgridsstorage.blob.core.windows.net',
   containers: {
     jerseys: 'jerseys',
-    leagues: 'leagues'
+    leagues: 'leagues',
+    assets: 'assets'
   }
 };
 
@@ -114,3 +115,6 @@ export const LEAGUE_URLS = {
     ucol: getAzureUrl('leagues', 'leagues/flags/ucol_flag.png')
   }
 };
+
+// Logo URL
+export const LOGO_URL = getAzureUrl('assets', 'assets/logo_kit.jpg');
