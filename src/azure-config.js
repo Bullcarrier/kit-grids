@@ -11,7 +11,7 @@ export const AZURE_CONFIG = {
 
 // Helper function to get Azure URLs
 export const getAzureUrl = (container, filename) => {
-  return `${AZURE_CONFIG.baseUrl}/${container}/${container}/${filename}`;
+  return `${AZURE_CONFIG.baseUrl}/${container}/${filename}`;
 };
 
 // Team jersey configurations with main colors
