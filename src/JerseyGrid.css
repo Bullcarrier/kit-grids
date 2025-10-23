@@ -1,0 +1,113 @@
+.jersey-grid-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.performance-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.performance-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100px;
+}
+
+.performance-stat .label {
+  opacity: 0.8;
+}
+
+.performance-stat .value {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.jerseys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.jersey-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jersey-info {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.jersey-info h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.jersey-info p {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* Performance optimizations for multiple jerseys */
+.jerseys-grid.optimized {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.jerseys-grid.optimized .jersey-item {
+  contain: layout style paint;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .jerseys-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .performance-panel {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jerseys-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .jersey-grid-container {
+    padding: 20px 10px;
+  }
+}

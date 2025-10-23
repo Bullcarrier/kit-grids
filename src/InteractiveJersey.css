@@ -1,0 +1,80 @@
+.jersey-container {
+  perspective: 800px;
+  width: 250px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin: 20px;
+}
+
+.jersey {
+  width: 100%;
+  height: auto;
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  backface-visibility: hidden;
+}
+
+.jersey:hover,
+.jersey.hovered {
+  transform: scale(1.05);
+}
+
+.jersey-shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+/* Performance optimizations for multiple jerseys */
+.jersey-container.multiple {
+  perspective: 600px;
+  width: 200px;
+  height: 240px;
+  margin: 10px;
+}
+
+.jersey-container.multiple .jersey {
+  transition: transform 0.05s ease-out;
+}
+
+.jersey-container.multiple .jersey-shadow {
+  width: 70%;
+  height: 15px;
+  bottom: -15px;
+  filter: blur(6px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .jersey-container {
+    width: 200px;
+    height: 240px;
+    margin: 10px;
+  }
+  
+  .jersey-container.multiple {
+    width: 150px;
+    height: 180px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jersey-container {
+    width: 150px;
+    height: 180px;
+    margin: 5px;
+  }
+}

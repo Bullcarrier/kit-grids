@@ -1,0 +1,69 @@
+League Information
+==================
+
+League: Premier League
+Code: gb1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/gb1.png?lm=1521104656
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/189.png?lm=1520611569
+--------------------------------------------------
+
+League: LaLiga
+Code: es1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/es1.png?lm=1725974302
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/157.png?lm=1520611569
+--------------------------------------------------
+
+League: Bundesliga
+Code: l1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/l1.png?lm=1525905518
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/40.png?lm=1520612525
+--------------------------------------------------
+
+League: Serie A
+Code: it1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/it1.png?lm=1656073460
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/75.png?lm=1520611569
+--------------------------------------------------
+
+League: Ligue 1
+Code: fr1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/fr1.png?lm=1732280518
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/50.png?lm=1520611569
+--------------------------------------------------
+
+League: Eredivisie
+Code: nl1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/nl1.png?lm=1751278149
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/122.png?lm=1520611569
+--------------------------------------------------
+
+League: Süper Lig
+Code: tr1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/tr1.png?lm=1723019495
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/174.png?lm=1520611569
+--------------------------------------------------
+
+League: Saudi Pro League
+Code: sa1
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/sa1.png?lm=1692612717
+Flag URL: https://tmssl.akamaized.net//images/flagge/homepageSmall/146.png?lm=1520611569
+--------------------------------------------------
+
+League: UEFA Champions League
+Code: cl
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/cl.png?lm=1626810555
+Flag URL: https://tmsi.akamaized.net/startseite/confeds/uefa75.png
+--------------------------------------------------
+
+League: UEFA Europa League
+Code: el
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/el.png?lm=1721915137
+Flag URL: https://tmsi.akamaized.net/startseite/confeds/uefa75.png
+--------------------------------------------------
+
+League: UEFA Conference League
+Code: ucol
+Logo URL: https://tmssl.akamaized.net//images/logo/homepageWappen150x150/ucol.png?lm=1721914537
+Flag URL: https://tmsi.akamaized.net/startseite/confeds/uefa75.png
+--------------------------------------------------
+

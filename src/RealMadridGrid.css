@@ -1,0 +1,333 @@
+.real-madrid-grid-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo-section {
+  width: 200px;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.kit-grids-logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.league-selector {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.league-selector-title {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.league-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.league-square {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.league-square:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.league-square.active {
+  width: 75px;
+  height: 75px;
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.league-square-logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.league-square.active .league-square-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.league-square-flag {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.league-square.active .league-square-flag {
+  width: 18px;
+  height: 13px;
+  top: 3px;
+  right: 3px;
+}
+
+.league-square-name {
+  font-size: 7px;
+  color: white;
+  text-align: center;
+  margin-top: 1px;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  word-break: break-word;
+  transition: all 0.3s ease;
+}
+
+.league-square.active .league-square-name {
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.jersey-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: calc(100vw - 200px);
+  height: 100vh;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.jersey-display-container {
+  perspective: 800px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.jersey-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+  backface-visibility: hidden;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.jersey-image.hovered {
+  transform: scale(1.05);
+}
+
+.jersey-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Color selector squares */
+.color-selector {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 16px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.3s ease-out;
+  z-index: 10;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.color-square {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-square:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.color-square.active {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.color-square.home {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+}
+
+.color-square.away {
+  background: linear-gradient(135deg, #000000 0%, #343a40 100%);
+  border: 2px solid #495057;
+}
+
+.color-square.third {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border: 2px solid #004085;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .logo-section {
+    width: 150px;
+  }
+  
+  .jersey-grid {
+    width: calc(100vw - 150px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  
+  .league-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .kit-grids-logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo-section {
+    width: 120px;
+  }
+  
+  .jersey-grid {
+    width: calc(100vw - 120px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+  
+  .league-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .kit-grids-logo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .real-madrid-grid-container {
+    flex-direction: column;
+  }
+  
+  .logo-section {
+    width: 100vw;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .jersey-grid {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  
+  .league-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .kit-grids-logo {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .jersey-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(20, 1fr);
+  }
+}

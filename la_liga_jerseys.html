@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Liga Jerseys Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .jerseys-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .jersey-container {
+            perspective: 800px;
+            width: 200px;
+            height: 240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .jersey {
+            width: 100%;
+            height: auto;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+            will-change: transform;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+            border-radius: 8px;
+        }
+
+        .jersey:hover {
+            transform: scale(1.05) rotateY(5deg);
+        }
+
+        .jersey-shadow {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 15px;
+            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(6px);
+        }
+
+        .jersey-info {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .jersey-info h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-section {
+            margin-bottom: 60px;
+        }
+
+        .team-title {
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .jerseys-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+            
+            .jersey-container {
+                width: 150px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .jerseys-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>La Liga Jerseys Collection</h1>
+        <p>Official Jersey Images from La Liga Teams</p>
+    </div>
+
+    <!-- Real Madrid Section -->
+    <div class="team-section">
+        <h2 class="team-title">Real Madrid</h2>
+        <div class="jerseys-grid">
+            <div class="jersey-container">
+                <img src="jersey_01.webp" class="jersey" alt="Real Madrid Home Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Home Kit</h3>
+                </div>
+            </div>
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=0" class="jersey" alt="Real Madrid Away Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Away Kit</h3>
+                </div>
+            </div>
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=30" class="jersey" alt="Real Madrid Third Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Third Kit</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barcelona Section -->
+    <div class="team-section">
+        <h2 class="team-title">Barcelona</h2>
+        <div class="jerseys-grid">
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=120" class="jersey" alt="Barcelona Home Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Home Kit</h3>
+                </div>
+            </div>
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=180" class="jersey" alt="Barcelona Away Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Away Kit</h3>
+                </div>
+            </div>
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=240" class="jersey" alt="Barcelona Third Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Third Kit</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Atletico Madrid Section -->
+    <div class="team-section">
+        <h2 class="team-title">Atletico Madrid</h2>
+        <div class="jerseys-grid">
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=0" class="jersey" alt="Atletico Madrid Home Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Home Kit</h3>
+                </div>
+            </div>
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=60" class="jersey" alt="Atletico Madrid Away Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Away Kit</h3>
+                </div>
+            </div>
+            <div class="jersey-container">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=300&fit=crop&crop=center&sat=-100&hue=300" class="jersey" alt="Atletico Madrid Third Jersey" />
+                <div class="jersey-shadow"></div>
+                <div class="jersey-info">
+                    <h3>Third Kit</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple mouse interaction for 3D effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const jerseys = document.querySelectorAll('.jersey');
+            
+            jerseys.forEach(jersey => {
+                jersey.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) rotateY(5deg)';
+                });
+                
+                jersey.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotateY(0deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

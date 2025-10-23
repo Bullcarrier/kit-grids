@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Jersey Grid - 20 Jerseys</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .jerseys-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .jersey-container {
+            perspective: 800px;
+            width: 200px;
+            height: 240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .jersey {
+            width: 100%;
+            height: auto;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+            will-change: transform;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+            border-radius: 8px;
+        }
+
+        .jersey:hover {
+            transform: scale(1.05) rotateY(5deg);
+        }
+
+        .jersey-shadow {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 15px;
+            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(6px);
+        }
+
+        .jersey-info {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .jersey-info h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .jerseys-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+            
+            .jersey-container {
+                width: 150px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .jerseys-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Football Jersey Collection</h1>
+        <p>20 Interactive Jerseys with 3D Effects</p>
+    </div>
+
+    <div class="jerseys-grid" id="jerseysGrid">
+        <!-- Jersey 1 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 1" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 1</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 2 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 2" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 2</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 3 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 3" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 3</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 4 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 4" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 4</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 5 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 5" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 5</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 6 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 6" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 6</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 7 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 7" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 7</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 8 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 8" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 8</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 9 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 9" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 9</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 10 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 10" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 10</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 11 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 11" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 11</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 12 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 12" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 12</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 13 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 13" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 13</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 14 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 14" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 14</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 15 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 15" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 15</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 16 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 16" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 16</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 17 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 17" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 17</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 18 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 18" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 18</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 19 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 19" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 19</h3>
+            </div>
+        </div>
+
+        <!-- Jersey 20 -->
+        <div class="jersey-container">
+            <img src="jersey_01.webp" class="jersey" alt="Football Jersey 20" />
+            <div class="jersey-shadow"></div>
+            <div class="jersey-info">
+                <h3>Jersey 20</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple mouse interaction for 3D effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const jerseys = document.querySelectorAll('.jersey');
+            
+            jerseys.forEach(jersey => {
+                jersey.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) rotateY(5deg)';
+                });
+                
+                jersey.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotateY(0deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

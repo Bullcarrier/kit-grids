@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Football Jerseys with 3D Effects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            gap: 40px;
+        }
+
+        .jersey-container {
+            perspective: 800px;
+            width: 250px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .jersey {
+            width: 100%;
+            height: auto;
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+            will-change: transform;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        .jersey:hover {
+            transform: scale(1.05);
+        }
+
+        .jersey-shadow {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 20px;
+            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(8px);
+        }
+
+        .demo-section {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .demo-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .demo-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 20px;
+            color: white;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .jersey-container {
+                width: 200px;
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator">
+        Scroll: <span id="scrollValue">0</span>px
+    </div>
+
+    <div class="demo-section">
+        <h1>SVG Football Jerseys</h1>
+        <p>Move your mouse and scroll to see the 3D effect!</p>
+    </div>
+
+    <div class="container" id="jerseyContainer">
+        <!-- Jersey 1 - Blue -->
+        <div class="jersey-container" data-jersey="1">
+            <svg class="jersey" data-jersey="1" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Jersey base -->
+                <rect x="20" y="40" width="160" height="180" rx="20" ry="20" fill="#4A90E2" stroke="#357ABD" stroke-width="2"/>
+                
+                <!-- Jersey collar -->
+                <path d="M60 40 L80 20 L120 20 L140 40" fill="#357ABD"/>
+                
+                <!-- Jersey sleeves -->
+                <rect x="10" y="60" width="30" height="80" rx="15" fill="#4A90E2"/>
+                <rect x="160" y="60" width="30" height="80" rx="15" fill="#4A90E2"/>
+                
+                <!-- Jersey number -->
+                <text x="100" y="140" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">1</text>
+                
+                <!-- Jersey sponsor -->
+                <rect x="70" y="160" width="60" height="20" rx="5" fill="white" opacity="0.8"/>
+                <text x="100" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#4A90E2">TEAM</text>
+            </svg>
+            <div class="jersey-shadow"></div>
+        </div>
+
+        <!-- Jersey 2 - Red -->
+        <div class="jersey-container" data-jersey="2">
+            <svg class="jersey" data-jersey="2" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Jersey base -->
+                <rect x="20" y="40" width="160" height="180" rx="20" ry="20" fill="#E74C3C" stroke="#C0392B" stroke-width="2"/>
+                
+                <!-- Jersey collar -->
+                <path d="M60 40 L80 20 L120 20 L140 40" fill="#C0392B"/>
+                
+                <!-- Jersey sleeves -->
+                <rect x="10" y="60" width="30" height="80" rx="15" fill="#E74C3C"/>
+                <rect x="160" y="60" width="30" height="80" rx="15" fill="#E74C3C"/>
+                
+                <!-- Jersey number -->
+                <text x="100" y="140" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">2</text>
+                
+                <!-- Jersey sponsor -->
+                <rect x="70" y="160" width="60" height="20" rx="5" fill="white" opacity="0.8"/>
+                <text x="100" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#E74C3C">TEAM</text>
+            </svg>
+            <div class="jersey-shadow"></div>
+        </div>
+
+        <!-- Jersey 3 - Green -->
+        <div class="jersey-container" data-jersey="3">
+            <svg class="jersey" data-jersey="3" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Jersey base -->
+                <rect x="20" y="40" width="160" height="180" rx="20" ry="20" fill="#27AE60" stroke="#229954" stroke-width="2"/>
+                
+                <!-- Jersey collar -->
+                <path d="M60 40 L80 20 L120 20 L140 40" fill="#229954"/>
+                
+                <!-- Jersey sleeves -->
+                <rect x="10" y="60" width="30" height="80" rx="15" fill="#27AE60"/>
+                <rect x="160" y="60" width="30" height="80" rx="15" fill="#27AE60"/>
+                
+                <!-- Jersey number -->
+                <text x="100" y="140" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">3</text>
+                
+                <!-- Jersey sponsor -->
+                <rect x="70" y="160" width="60" height="20" rx="5" fill="white" opacity="0.8"/>
+                <text x="100" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#27AE60">TEAM</text>
+            </svg>
+            <div class="jersey-shadow"></div>
+        </div>
+
+        <!-- Jersey 4 - Orange -->
+        <div class="jersey-container" data-jersey="4">
+            <svg class="jersey" data-jersey="4" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Jersey base -->
+                <rect x="20" y="40" width="160" height="180" rx="20" ry="20" fill="#F39C12" stroke="#E67E22" stroke-width="2"/>
+                
+                <!-- Jersey collar -->
+                <path d="M60 40 L80 20 L120 20 L140 40" fill="#E67E22"/>
+                
+                <!-- Jersey sleeves -->
+                <rect x="10" y="60" width="30" height="80" rx="15" fill="#F39C12"/>
+                <rect x="160" y="60" width="30" height="80" rx="15" fill="#F39C12"/>
+                
+                <!-- Jersey number -->
+                <text x="100" y="140" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">4</text>
+                
+                <!-- Jersey sponsor -->
+                <rect x="70" y="160" width="60" height="20" rx="5" fill="white" opacity="0.8"/>
+                <text x="100" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F39C12">TEAM</text>
+            </svg>
+            <div class="jersey-shadow"></div>
+        </div>
+    </div>
+
+    <script>
+        class InteractiveJersey {
+            constructor() {
+                this.jerseys = document.querySelectorAll('.jersey');
+                this.jerseyContainers = document.querySelectorAll('.jersey-container');
+                this.scrollValue = document.getElementById('scrollValue');
+                this.isAnimating = false;
+                
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.setupScrollIndicator();
+            }
+
+            setupEventListeners() {
+                // Mouse move for 3D rotation
+                document.addEventListener('mousemove', (e) => {
+                    this.handleMouseMove(e);
+                });
+
+                // Scroll for parallax effect
+                window.addEventListener('scroll', () => {
+                    this.handleScroll();
+                });
+
+                // Touch events for mobile
+                document.addEventListener('touchmove', (e) => {
+                    if (e.touches.length === 1) {
+                        const touch = e.touches[0];
+                        this.handleMouseMove({
+                            clientX: touch.clientX,
+                            clientY: touch.clientY
+                        });
+                    }
+                });
+            }
+
+            handleMouseMove(e) {
+                if (this.isAnimating) return;
+                
+                this.isAnimating = true;
+                requestAnimationFrame(() => {
+                    this.jerseyContainers.forEach((container, index) => {
+                        const jersey = container.querySelector('.jersey');
+                        const rect = container.getBoundingClientRect();
+                        const centerX = rect.left + rect.width / 2;
+                        const centerY = rect.top + rect.height / 2;
+                        
+                        const deltaX = e.clientX - centerX;
+                        const deltaY = e.clientY - centerY;
+                        
+                        // Calculate rotation based on distance from center
+                        const maxDistance = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
+                        const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+                        const intensity = Math.min(distance / maxDistance, 1);
+                        
+                        // Apply rotation with different intensities for variety
+                        const rotationY = (deltaX / window.innerWidth) * 15 * intensity;
+                        const rotationX = -(deltaY / window.innerHeight) * 15 * intensity;
+                        
+                        // Add slight Z translation for depth
+                        const translateZ = intensity * 20;
+                        
+                        jersey.style.transform = `
+                            rotateY(${rotationY}deg) 
+                            rotateX(${rotationX}deg) 
+                            translateZ(${translateZ}px)
+                        `;
+                    });
+                    
+                    this.isAnimating = false;
+                });
+            }
+
+            handleScroll() {
+                const scrollY = window.scrollY;
+                this.scrollValue.textContent = Math.round(scrollY);
+                
+                this.jerseyContainers.forEach((container, index) => {
+                    const jersey = container.querySelector('.jersey');
+                    const rect = container.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                    
+                    if (isVisible) {
+                        // Parallax effect based on scroll
+                        const parallaxOffset = (scrollY - rect.top) * 0.1;
+                        const rotationZ = parallaxOffset * 0.1;
+                        
+                        // Get current transform and add scroll effect
+                        const currentTransform = jersey.style.transform;
+                        const scrollTransform = `rotateZ(${rotationZ}deg) translateY(${parallaxOffset}px)`;
+                        
+                        if (currentTransform.includes('rotateY') || currentTransform.includes('rotateX')) {
+                            // Preserve existing mouse rotation
+                            jersey.style.transform = currentTransform + ' ' + scrollTransform;
+                        } else {
+                            jersey.style.transform = scrollTransform;
+                        }
+                    }
+                });
+            }
+
+            setupScrollIndicator() {
+                // Update scroll indicator
+                window.addEventListener('scroll', () => {
+                    this.scrollValue.textContent = Math.round(window.scrollY);
+                });
+            }
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new InteractiveJersey();
+        });
+
+        // Add some demo content to make scrolling more interesting
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const spacer = document.createElement('div');
+            spacer.style.height = '200vh';
+            spacer.style.background = 'linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)';
+            body.appendChild(spacer);
+        });
+    </script>
+</body>
+</html>

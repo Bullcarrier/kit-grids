@@ -1,0 +1,156 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.control-group label {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.control-group select,
+.control-group input[type="range"] {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+}
+
+.control-group input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.control-group span {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.app-main {
+  padding: 40px 20px;
+  min-height: 60vh;
+}
+
+.single-jersey-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.app-footer {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tech-stack h3,
+.features h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #4CAF50;
+}
+
+.tech-stack ul,
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-stack li,
+.features li {
+  padding: 5px 0;
+  opacity: 0.9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack li:last-child,
+.features li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .control-group {
+    width: 100%;
+    max-width: 300px;
+    justify-content: space-between;
+  }
+  
+  .app-footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 20px 10px;
+  }
+  
+  .app-main {
+    padding: 20px 10px;
+  }
+  
+  .app-footer {
+    padding: 20px 10px;
+  }
+}
