@@ -218,12 +218,12 @@ const RealMadridGrid = () => {
                 onClick={() => setSelectedLeague(code)}
               >
                 <img 
-                  src={`./leagues/logos/${league.logo}`}
+                  src={league.logo}
                   alt={`${league.name} Logo`}
                   className="league-square-logo"
                 />
                 <img 
-                  src={`./leagues/flags/${league.flag}`}
+                  src={league.flag}
                   alt={`${league.country} Flag`}
                   className="league-square-flag"
                 />
