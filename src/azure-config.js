@@ -14,11 +14,75 @@ export const getAzureUrl = (container, filename) => {
   return `${AZURE_CONFIG.baseUrl}/${container}/${container}/${filename}`;
 };
 
-// Jersey URLs
+// Team jersey configurations with main colors
+export const TEAM_CONFIGS = {
+  // La Liga
+  real_madrid: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/home_2025.webp'), color: 'white', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/away_2025.webp'), color: 'black', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/third_2025.webp'), color: 'blue', name: 'Third' }
+  },
+  // Premier League
+  liverpool: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/premier_jerseys/liverpool/home_2025.webp'), color: 'red', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/premier_jerseys/liverpool/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/premier_jerseys/liverpool/third_2025.webp'), color: 'green', name: 'Third' }
+  },
+  // Bundesliga
+  dortmund: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/bundesliga_jerseys/dortmund/home_2025.webp'), color: 'yellow', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/bundesliga_jerseys/dortmund/away_2025.webp'), color: 'black', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/bundesliga_jerseys/dortmund/third_2025.webp'), color: 'white', name: 'Third' }
+  },
+  // Serie A
+  milan: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/seria_jerseys/milan/home_2025.webp'), color: 'red', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/seria_jerseys/milan/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/seria_jerseys/milan/third_2025.webp'), color: 'black', name: 'Third' }
+  },
+  // Ligue 1
+  marseille: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/ligue1_jerseys/marseille/home_2025.webp'), color: 'blue', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/ligue1_jerseys/marseille/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/ligue1_jerseys/marseille/third_2025.webp'), color: 'orange', name: 'Third' }
+  },
+  // Eredivisie
+  ajax: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/eredivise_jerseys/ajax/home_2025.webp'), color: 'red', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/eredivise_jerseys/ajax/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/eredivise_jerseys/ajax/third_2025.webp'), color: 'blue', name: 'Third' }
+  },
+  // Süper Lig
+  besiktas: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/superliga_jerseys/besiktas/home_2025.jpg'), color: 'black', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/superliga_jerseys/besiktas/away_2025.jpg'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/superliga_jerseys/besiktas/third_2025.jpg'), color: 'red', name: 'Third' }
+  },
+  // Saudi Pro League
+  alahly: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/saudipro_jerseys/alahly/home_2025.jpg'), color: 'red', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/saudipro_jerseys/alahly/away_2025.jpg'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/saudipro_jerseys/alahly/third_2025.jpg'), color: 'yellow', name: 'Third' }
+  }
+};
+
+// League to team mapping
+export const LEAGUE_TEAMS = {
+  es1: 'real_madrid',    // La Liga
+  gb1: 'liverpool',      // Premier League
+  l1: 'dortmund',        // Bundesliga
+  it1: 'milan',          // Serie A
+  fr1: 'marseille',     // Ligue 1
+  nl1: 'ajax',           // Eredivisie
+  tr1: 'besiktas',       // Süper Lig
+  sa1: 'alahly'          // Saudi Pro League
+};
+
+// Legacy support for existing code
 export const JERSEY_URLS = {
-  home: getAzureUrl('jerseys', 'home_2025.webp'),
-  away: getAzureUrl('jerseys', 'away_2025.webp'),
-  third: getAzureUrl('jerseys', 'third_2025.webp')
+  home: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/home_2025.webp'),
+  away: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/away_2025.webp'),
+  third: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/third_2025.webp')
 };
 
 // League URLs
