@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { JERSEY_URLS, LEAGUE_URLS } from './azure-config';
 import './RealMadridGrid.css';
 
 const RealMadridGrid = () => {
@@ -17,19 +18,19 @@ const RealMadridGrid = () => {
 
   const jerseys = {
     home: {
-      src: '/jerseys/home_2025.webp',
+      src: JERSEY_URLS.home,
       alt: 'Real Madrid Home Jersey 2025',
       color: 'white',
       name: 'Home'
     },
     away: {
-      src: '/jerseys/away_2025.webp',
+      src: JERSEY_URLS.away,
       alt: 'Real Madrid Away Jersey 2025',
       color: 'black',
       name: 'Away'
     },
     third: {
-      src: '/jerseys/third_2025.webp',
+      src: JERSEY_URLS.third,
       alt: 'Real Madrid Third Jersey 2025',
       color: 'blue',
       name: 'Third'
@@ -37,17 +38,17 @@ const RealMadridGrid = () => {
   };
 
   const leagues = {
-    gb1: { name: 'Premier League', country: 'England', logo: '/leagues/logos/gb1_logo.png', flag: '/leagues/flags/gb1_flag.png' },
-    es1: { name: 'La Liga', country: 'Spain', logo: '/leagues/logos/es1_logo.png', flag: '/leagues/flags/es1_flag.png' },
-    l1: { name: 'Bundesliga', country: 'Germany', logo: '/leagues/logos/l1_logo.png', flag: '/leagues/flags/l1_flag.png' },
-    it1: { name: 'Serie A', country: 'Italy', logo: '/leagues/logos/it1_logo.png', flag: '/leagues/flags/it1_flag.png' },
-    fr1: { name: 'Ligue 1', country: 'France', logo: '/leagues/logos/fr1_logo.png', flag: '/leagues/flags/fr1_flag.png' },
-    nl1: { name: 'Eredivisie', country: 'Netherlands', logo: '/leagues/logos/nl1_logo.png', flag: '/leagues/flags/nl1_flag.png' },
-    tr1: { name: 'Süper Lig', country: 'Turkey', logo: '/leagues/logos/tr1_logo.png', flag: '/leagues/flags/tr1_flag.png' },
-    sa1: { name: 'Saudi Pro League', country: 'Saudi Arabia', logo: '/leagues/logos/sa1_logo.png', flag: '/leagues/flags/sa1_flag.png' },
-    cl: { name: 'UEFA Champions League', country: 'UEFA', logo: '/leagues/logos/cl_logo.png', flag: '/leagues/flags/cl_flag.png' },
-    el: { name: 'UEFA Europa League', country: 'UEFA', logo: '/leagues/logos/el_logo.png', flag: '/leagues/flags/el_flag.png' },
-    ucol: { name: 'UEFA Conference League', country: 'UEFA', logo: '/leagues/logos/ucol_logo.png', flag: '/leagues/flags/ucol_flag.png' }
+    gb1: { name: 'Premier League', country: 'England', logo: LEAGUE_URLS.logos.gb1, flag: LEAGUE_URLS.flags.gb1 },
+    es1: { name: 'La Liga', country: 'Spain', logo: LEAGUE_URLS.logos.es1, flag: LEAGUE_URLS.flags.es1 },
+    l1: { name: 'Bundesliga', country: 'Germany', logo: LEAGUE_URLS.logos.l1, flag: LEAGUE_URLS.flags.l1 },
+    it1: { name: 'Serie A', country: 'Italy', logo: LEAGUE_URLS.logos.it1, flag: LEAGUE_URLS.flags.it1 },
+    fr1: { name: 'Ligue 1', country: 'France', logo: LEAGUE_URLS.logos.fr1, flag: LEAGUE_URLS.flags.fr1 },
+    nl1: { name: 'Eredivisie', country: 'Netherlands', logo: LEAGUE_URLS.logos.nl1, flag: LEAGUE_URLS.flags.nl1 },
+    tr1: { name: 'Süper Lig', country: 'Turkey', logo: LEAGUE_URLS.logos.tr1, flag: LEAGUE_URLS.flags.tr1 },
+    sa1: { name: 'Saudi Pro League', country: 'Saudi Arabia', logo: LEAGUE_URLS.logos.sa1, flag: LEAGUE_URLS.flags.sa1 },
+    cl: { name: 'UEFA Champions League', country: 'UEFA', logo: LEAGUE_URLS.logos.cl, flag: LEAGUE_URLS.flags.cl },
+    el: { name: 'UEFA Europa League', country: 'UEFA', logo: LEAGUE_URLS.logos.el, flag: LEAGUE_URLS.flags.el },
+    ucol: { name: 'UEFA Conference League', country: 'UEFA', logo: LEAGUE_URLS.logos.ucol, flag: LEAGUE_URLS.flags.ucol }
   };
 
   const handleJerseyChange = useCallback((jerseyIndex, jerseyType) => {
