@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { JERSEY_URLS, LEAGUE_URLS } from './azure-config.js';
+import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import { TEAM_CONFIGS, LEAGUE_TEAMS, LEAGUE_URLS } from './azure-config.js';
 import './RealMadridGrid.css';
 
 const RealMadridGrid = () => {
@@ -16,26 +16,14 @@ const RealMadridGrid = () => {
   // League selector state
   const [selectedLeague, setSelectedLeague] = useState('es1'); // La Liga by default
 
-  const jerseys = {
-    home: {
-      src: JERSEY_URLS.home,
-      alt: 'Real Madrid Home Jersey 2025',
-      color: 'white',
-      name: 'Home'
-    },
-    away: {
-      src: JERSEY_URLS.away,
-      alt: 'Real Madrid Away Jersey 2025',
-      color: 'black',
-      name: 'Away'
-    },
-    third: {
-      src: JERSEY_URLS.third,
-      alt: 'Real Madrid Third Jersey 2025',
-      color: 'blue',
-      name: 'Third'
-    }
-  };
+  // Get current team configuration based on selected league
+  const currentTeamConfig = useMemo(() => {
+    const teamKey = LEAGUE_TEAMS[selectedLeague];
+    console.log('Selected League:', selectedLeague, 'Team Key:', teamKey);
+    const config = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
+    console.log('Current Team Config:', config);
+    return config;
+  }, [selectedLeague]);
 
   const leagues = {
     gb1: { name: 'Premier League', country: 'England', logo: LEAGUE_URLS.logos.gb1, flag: LEAGUE_URLS.flags.gb1 },
@@ -234,55 +222,59 @@ const RealMadridGrid = () => {
         </div>
       </div>
       <div className="jersey-grid">
-        {gridJerseys.map((index) => {
-          const currentState = jerseyStates[index];
-          const displayJersey = currentState.previewJersey || currentState.selectedJersey;
-          
-          return (
-            <div 
-              key={index}
-              id={`container-${index}`}
-              className="jersey-display-container"
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-            >
-              <img 
-                id={`jersey-${index}`}
-                src={jerseys[displayJersey].src}
-                alt={jerseys[displayJersey].alt}
-                className={`jersey-image ${currentState.isHovered ? 'hovered' : ''} ${currentState.isTransitioning ? 'transitioning' : ''}`}
-              />
-              <div className="jersey-shadow" />
-              
-              {/* Color selector squares - show on hover for each jersey */}
-              {currentState.isHovered && (
-                <div className="color-selector">
-                  <button
-                    className={`color-square home ${currentState.selectedJersey === 'home' ? 'active' : ''}`}
-                    onClick={() => handleJerseyChange(index, 'home')}
-                    onMouseEnter={() => handleSquareHover(index, 'home')}
-                    onMouseLeave={() => handleSquareLeave(index)}
-                    title="Home Jersey"
-                  />
-                  <button
-                    className={`color-square away ${currentState.selectedJersey === 'away' ? 'active' : ''}`}
-                    onClick={() => handleJerseyChange(index, 'away')}
-                    onMouseEnter={() => handleSquareHover(index, 'away')}
-                    onMouseLeave={() => handleSquareLeave(index)}
-                    title="Away Jersey"
-                  />
-                  <button
-                    className={`color-square third ${currentState.selectedJersey === 'third' ? 'active' : ''}`}
-                    onClick={() => handleJerseyChange(index, 'third')}
-                    onMouseEnter={() => handleSquareHover(index, 'third')}
-                    onMouseLeave={() => handleSquareLeave(index)}
-                    title="Third Jersey"
-                  />
-                </div>
-              )}
-            </div>
-          );
-        })}
+                {gridJerseys.map((index) => {
+                  const currentState = jerseyStates[index];
+                  const displayJersey = currentState.previewJersey || currentState.selectedJersey;
+                  const jerseyConfig = currentTeamConfig[displayJersey];
+
+                  return (
+                    <div
+                      key={index}
+                      id={`container-${index}`}
+                      className="jersey-display-container"
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={() => handleMouseLeave(index)}
+                    >
+                      <img
+                        id={`jersey-${index}`}
+                        src={jerseyConfig.src}
+                        alt={`${jerseyConfig.name} Jersey 2025`}
+                        className={`jersey-image ${currentState.isHovered ? 'hovered' : ''} ${currentState.isTransitioning ? 'transitioning' : ''}`}
+                      />
+                      <div className="jersey-shadow" />
+
+                      {/* Color selector squares - show on hover for each jersey */}
+                      {currentState.isHovered && (
+                        <div className="color-selector">
+                          <button
+                            className={`color-square home ${currentState.selectedJersey === 'home' ? 'active' : ''}`}
+                            onClick={() => handleJerseyChange(index, 'home')}
+                            onMouseEnter={() => handleSquareHover(index, 'home')}
+                            onMouseLeave={() => handleSquareLeave(index)}
+                            title={`${currentTeamConfig.home.name} Jersey`}
+                            style={{ backgroundColor: currentTeamConfig.home.color }}
+                          />
+                          <button
+                            className={`color-square away ${currentState.selectedJersey === 'away' ? 'active' : ''}`}
+                            onClick={() => handleJerseyChange(index, 'away')}
+                            onMouseEnter={() => handleSquareHover(index, 'away')}
+                            onMouseLeave={() => handleSquareLeave(index)}
+                            title={`${currentTeamConfig.away.name} Jersey`}
+                            style={{ backgroundColor: currentTeamConfig.away.color }}
+                          />
+                          <button
+                            className={`color-square third ${currentState.selectedJersey === 'third' ? 'active' : ''}`}
+                            onClick={() => handleJerseyChange(index, 'third')}
+                            onMouseEnter={() => handleSquareHover(index, 'third')}
+                            onMouseLeave={() => handleSquareLeave(index)}
+                            title={`${currentTeamConfig.third.name} Jersey`}
+                            style={{ backgroundColor: currentTeamConfig.third.color }}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
       </div>
     </div>
   );
