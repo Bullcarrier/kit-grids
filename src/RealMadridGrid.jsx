@@ -20,6 +20,7 @@ const RealMadridGrid = () => {
   const currentTeamConfig = useMemo(() => {
     const teamKey = LEAGUE_TEAMS[selectedLeague];
     const config = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
+    console.log('League:', selectedLeague, 'Team:', teamKey, 'Config:', config);
     return config;
   }, [selectedLeague]);
 
@@ -238,6 +239,13 @@ const RealMadridGrid = () => {
                         src={jerseyConfig.src}
                         alt={`${jerseyConfig.name} Jersey 2025`}
                         className={`jersey-image ${currentState.isHovered ? 'hovered' : ''} ${currentState.isTransitioning ? 'transitioning' : ''}`}
+                        onError={(e) => {
+                          console.error(`Failed to load jersey image: ${jerseyConfig.src}`);
+                          console.error('Error event:', e);
+                        }}
+                        onLoad={() => {
+                          console.log(`Successfully loaded jersey: ${jerseyConfig.src}`);
+                        }}
                       />
                       <div className="jersey-shadow" />
 
