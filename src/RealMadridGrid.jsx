@@ -19,9 +19,7 @@ const RealMadridGrid = () => {
   // Get current team configuration based on selected league
   const currentTeamConfig = useMemo(() => {
     const teamKey = LEAGUE_TEAMS[selectedLeague];
-    console.log('Selected League:', selectedLeague, 'Team Key:', teamKey);
     const config = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
-    console.log('Current Team Config:', config);
     return config;
   }, [selectedLeague]);
 
