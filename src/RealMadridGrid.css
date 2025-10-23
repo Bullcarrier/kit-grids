@@ -251,83 +251,249 @@
   border: 2px solid #004085;
 }
 
-/* Responsive design */
-@media (max-width: 1200px) {
-  .logo-section {
-    width: 150px;
-  }
-  
-  .jersey-grid {
-    width: calc(100vw - 150px);
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-  }
-  
-  .league-logo {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .kit-grids-logo {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 900px) {
-  .logo-section {
-    width: 120px;
-  }
-  
-  .jersey-grid {
-    width: calc(100vw - 120px);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-  }
-  
-  .league-logo {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .kit-grids-logo {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 600px) {
+/* Mobile - Vertical Layout (Portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
   .real-madrid-grid-container {
     flex-direction: column;
   }
   
   .logo-section {
     width: 100vw;
-    height: 80px;
+    height: auto;
+    min-height: 120px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .kit-grids-logo {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  
+  .league-selector {
+    flex: 1;
+    margin-top: 0;
     padding: 10px;
+  }
+  
+  .league-selector-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .league-grid {
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .league-square {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .league-square.active {
+    width: 55px;
+    height: 55px;
+    transform: translateY(-3px);
+  }
+  
+  .league-square-logo {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .league-square.active .league-square-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .league-square-flag {
+    width: 10px;
+    height: 7px;
+  }
+  
+  .league-square.active .league-square-flag {
+    width: 12px;
+    height: 8px;
+  }
+  
+  .league-square-name {
+    font-size: 6px;
+  }
+  
+  .league-square.active .league-square-name {
+    font-size: 7px;
   }
   
   .jersey-grid {
     width: 100vw;
-    height: calc(100vh - 80px);
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    height: calc(100vh - 120px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
-  
-  .league-logo {
-    width: 60px;
-    height: 60px;
+}
+
+/* Mobile - Horizontal Layout (Landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+  .logo-section {
+    width: 120px;
+    padding: 10px;
   }
   
   .kit-grids-logo {
     font-size: 16px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
+  }
+  
+  .jersey-grid {
+    width: calc(100vw - 120px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .league-square {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .league-square.active {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .league-square-logo {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .league-square.active .league-square-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .league-square-flag {
+    width: 10px;
+    height: 7px;
+  }
+  
+  .league-square.active .league-square-flag {
+    width: 12px;
+    height: 8px;
+  }
+  
+  .league-square-name {
+    font-size: 6px;
+  }
+  
+  .league-square.active .league-square-name {
+    font-size: 7px;
   }
 }
 
-@media (max-width: 400px) {
+/* Tablet - Vertical Layout */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .real-madrid-grid-container {
+    flex-direction: column;
+  }
+  
+  .logo-section {
+    width: 100vw;
+    height: auto;
+    min-height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .kit-grids-logo {
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  
+  .league-selector {
+    flex: 1;
+    margin-top: 0;
+    padding: 15px;
+  }
+  
+  .league-selector-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .league-grid {
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .league-square {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .league-square.active {
+    width: 60px;
+    height: 60px;
+    transform: translateY(-3px);
+  }
+  
+  .league-square-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .league-square.active .league-square-logo {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .league-square-flag {
+    width: 12px;
+    height: 8px;
+  }
+  
+  .league-square.active .league-square-flag {
+    width: 15px;
+    height: 10px;
+  }
+  
+  .league-square-name {
+    font-size: 7px;
+  }
+  
+  .league-square.active .league-square-name {
+    font-size: 8px;
+  }
+  
   .jersey-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(20, 1fr);
+    width: 100vw;
+    height: calc(100vh - 100px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
+
+/* Desktop - Horizontal Layout */
+@media (min-width: 1025px) {
+  .logo-section {
+    width: 200px;
+  }
+  
+  .jersey-grid {
+    width: calc(100vw - 200px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
