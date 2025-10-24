@@ -17,11 +17,31 @@ export const getAzureUrl = (container, filename) => {
 
 // Team jersey configurations with main colors
 export const TEAM_CONFIGS = {
-  // La Liga
+  // La Liga Teams
   real_madrid: {
     home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/home_2025.webp'), color: 'white', name: 'Home' },
     away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/away_2025.webp'), color: 'black', name: 'Away' },
     third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_madrid/third_2025.webp'), color: 'blue', name: 'Third' }
+  },
+  barcelona: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/barcelona/home_2025.webp'), color: 'blue', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/barcelona/away_2025.webp'), color: 'red', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/barcelona/third_2025.webp'), color: 'yellow', name: 'Third' }
+  },
+  atletico_madrid: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/atletico_madrid/home_2025.webp'), color: 'red', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/atletico_madrid/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/atletico_madrid/third_2025.webp'), color: 'blue', name: 'Third' }
+  },
+  athletic_bilbao: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/athletic_bilbao/home_2025.webp'), color: 'red', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/athletic_bilbao/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/athletic_bilbao/third_2025.webp'), color: 'black', name: 'Third' }
+  },
+  villarreal_cf: {
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/villarreal_cf/home_2025.webp'), color: 'yellow', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/villarreal_cf/away_2025.webp'), color: 'white', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/villarreal_cf/third_2025.webp'), color: 'blue', name: 'Third' }
   },
   // Premier League
   liverpool: {
@@ -115,6 +135,14 @@ export const LEAGUE_URLS = {
     ucol: getAzureUrl('leagues', 'leagues/flags/ucol_flag.png')
   }
 };
+
+// La Liga Teams Array
+export const LA_LIGA_TEAMS = [
+  'real_madrid', 'barcelona', 'atletico_madrid', 'athletic_bilbao', 'villarreal_cf',
+  'real_sociedad', 'real_betis', 'valencia', 'girona', 'celta_vigo', 'sevilla_fc',
+  'rcd_espanyol', 'ca_osasuna', 'rayo_vallecano', 'levante_ud', 'rcd_mallorca',
+  'elche_cf', 'deportivo_alaves', 'getafe_cf', 'real_oviedo'
+];
 
 // Logo URL
 export const LOGO_URL = getAzureUrl('assets', 'assets/logo_kit.jpg');

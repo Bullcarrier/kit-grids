@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { TEAM_CONFIGS, LEAGUE_TEAMS, LEAGUE_URLS, LOGO_URL } from './azure-config.js';
+import { TEAM_CONFIGS, LEAGUE_TEAMS, LEAGUE_URLS, LOGO_URL, LA_LIGA_TEAMS } from './azure-config.js';
 import './RealMadridGrid.css';
 
 const RealMadridGrid = () => {
@@ -22,6 +22,18 @@ const RealMadridGrid = () => {
     const config = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
     console.log('League:', selectedLeague, 'Team:', teamKey, 'Config:', config);
     return config;
+  }, [selectedLeague]);
+
+  // Get teams to display in grid based on selected league
+  const teamsToDisplay = useMemo(() => {
+    if (selectedLeague === 'es1') {
+      // For La Liga, show all 20 La Liga teams
+      return LA_LIGA_TEAMS;
+    } else {
+      // For other leagues, show the same team 20 times
+      const teamKey = LEAGUE_TEAMS[selectedLeague];
+      return Array(20).fill(teamKey);
+    }
   }, [selectedLeague]);
 
   const leagues = {
@@ -227,7 +239,11 @@ const RealMadridGrid = () => {
                 {gridJerseys.map((index) => {
                   const currentState = jerseyStates[index];
                   const displayJersey = currentState.previewJersey || currentState.selectedJersey;
-                  const jerseyConfig = currentTeamConfig[displayJersey];
+                  
+                  // Get the team for this grid position
+                  const teamKey = teamsToDisplay[index];
+                  const teamConfig = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
+                  const jerseyConfig = teamConfig[displayJersey];
 
                   return (
                     <div
@@ -260,25 +276,27 @@ const RealMadridGrid = () => {
                             onClick={() => handleJerseyChange(index, 'home')}
                             onMouseEnter={() => handleSquareHover(index, 'home')}
                             onMouseLeave={() => handleSquareLeave(index)}
-                            title={`${currentTeamConfig.home.name} Jersey`}
-                            style={{ backgroundColor: currentTeamConfig.home.color }}
+                            title={`${teamConfig.home.name} Jersey`}
+                            style={{ backgroundColor: teamConfig.home.color }}
                           />
                           <button
                             className={`color-square away ${currentState.selectedJersey === 'away' ? 'active' : ''}`}
                             onClick={() => handleJerseyChange(index, 'away')}
                             onMouseEnter={() => handleSquareHover(index, 'away')}
                             onMouseLeave={() => handleSquareLeave(index)}
-                            title={`${currentTeamConfig.away.name} Jersey`}
-                            style={{ backgroundColor: currentTeamConfig.away.color }}
+                            title={`${teamConfig.away.name} Jersey`}
+                            style={{ backgroundColor: teamConfig.away.color }}
                           />
-                          <button
-                            className={`color-square third ${currentState.selectedJersey === 'third' ? 'active' : ''}`}
-                            onClick={() => handleJerseyChange(index, 'third')}
-                            onMouseEnter={() => handleSquareHover(index, 'third')}
-                            onMouseLeave={() => handleSquareLeave(index)}
-                            title={`${currentTeamConfig.third.name} Jersey`}
-                            style={{ backgroundColor: currentTeamConfig.third.color }}
-                          />
+                          {teamConfig.third && (
+                            <button
+                              className={`color-square third ${currentState.selectedJersey === 'third' ? 'active' : ''}`}
+                              onClick={() => handleJerseyChange(index, 'third')}
+                              onMouseEnter={() => handleSquareHover(index, 'third')}
+                              onMouseLeave={() => handleSquareLeave(index)}
+                              title={`${teamConfig.third.name} Jersey`}
+                              style={{ backgroundColor: teamConfig.third.color }}
+                            />
+                          )}
                         </div>
                       )}
                     </div>
