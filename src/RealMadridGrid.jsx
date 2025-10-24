@@ -240,10 +240,19 @@ const RealMadridGrid = () => {
                   const currentState = jerseyStates[index];
                   const displayJersey = currentState.previewJersey || currentState.selectedJersey;
                   
-                  // Get the team for this grid position
-                  const teamKey = teamsToDisplay[index];
-                  const teamConfig = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
-                  const jerseyConfig = teamConfig[displayJersey];
+          // Get the team for this grid position
+          const teamKey = teamsToDisplay[index];
+          const teamConfig = TEAM_CONFIGS[teamKey] || TEAM_CONFIGS.real_madrid;
+          const jerseyConfig = teamConfig[displayJersey];
+          
+          // Debug: Log colors for verification
+          if (index === 0) {
+            console.log('Team:', teamKey, 'Colors:', {
+              home: teamConfig.home?.color,
+              away: teamConfig.away?.color,
+              third: teamConfig.third?.color
+            });
+          }
 
                   return (
                     <div
