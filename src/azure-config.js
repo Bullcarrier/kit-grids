@@ -44,79 +44,79 @@ export const TEAM_CONFIGS = {
     third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/villarreal_cf/third_2025.webp'), color: 'blue', name: 'Third' }
   },
   real_sociedad: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_sociedad/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_sociedad/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_sociedad/third_2025.webp'), color: 'black', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_sociedad/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_sociedad/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_sociedad/third_2025.webp'), color: '#000000', name: 'Third' }
   },
   real_betis: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_betis/home_2025.webp'), color: 'green', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_betis/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_betis/third_2025.webp'), color: 'black', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_betis/home_2025.webp'), color: '#16a34a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_betis/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_betis/third_2025.webp'), color: '#000000', name: 'Third' }
   },
   valencia: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/valencia/home_2025.webp'), color: 'orange', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/valencia/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/valencia/third_2025.webp'), color: 'black', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/valencia/home_2025.webp'), color: '#ea580c', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/valencia/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/valencia/third_2025.webp'), color: '#000000', name: 'Third' }
   },
   girona: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/girona/home_2025.webp'), color: 'red', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/girona/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/girona/third_2025.webp'), color: 'blue', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/girona/home_2025.webp'), color: '#dc2626', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/girona/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/girona/third_2025.webp'), color: '#1e3a8a', name: 'Third' }
   },
   celta_vigo: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/celta_vigo/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/celta_vigo/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/celta_vigo/third_2025.webp'), color: 'black', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/celta_vigo/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/celta_vigo/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/celta_vigo/third_2025.webp'), color: '#000000', name: 'Third' }
   },
   sevilla_fc: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/sevilla_fc/home_2025.webp'), color: 'white', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/sevilla_fc/away_2025.webp'), color: 'black', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/sevilla_fc/third_2025.webp'), color: 'red', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/sevilla_fc/home_2025.webp'), color: '#ffffff', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/sevilla_fc/away_2025.webp'), color: '#000000', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/sevilla_fc/third_2025.webp'), color: '#dc2626', name: 'Third' }
   },
   rcd_espanyol: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_espanyol/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_espanyol/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_espanyol/third_2025.webp'), color: 'yellow', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_espanyol/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_espanyol/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_espanyol/third_2025.webp'), color: '#eab308', name: 'Third' }
   },
   ca_osasuna: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/ca_osasuna/home_2025.webp'), color: 'red', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/ca_osasuna/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/ca_osasuna/third_2025.webp'), color: 'blue', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/ca_osasuna/home_2025.webp'), color: '#dc2626', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/ca_osasuna/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/ca_osasuna/third_2025.webp'), color: '#1e3a8a', name: 'Third' }
   },
   rayo_vallecano: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rayo_vallecano/home_2025.webp'), color: 'red', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rayo_vallecano/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rayo_vallecano/third_2025.webp'), color: 'blue', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rayo_vallecano/home_2025.webp'), color: '#dc2626', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rayo_vallecano/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rayo_vallecano/third_2025.webp'), color: '#1e3a8a', name: 'Third' }
   },
   levante_ud: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/levante_ud/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/levante_ud/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/levante_ud/third_2025.webp'), color: 'red', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/levante_ud/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/levante_ud/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/levante_ud/third_2025.webp'), color: '#dc2626', name: 'Third' }
   },
   rcd_mallorca: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_mallorca/home_2025.webp'), color: 'red', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_mallorca/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_mallorca/third_2025.webp'), color: 'black', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_mallorca/home_2025.webp'), color: '#dc2626', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_mallorca/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/rcd_mallorca/third_2025.webp'), color: '#000000', name: 'Third' }
   },
   elche_cf: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/elche_cf/home_2025.webp'), color: 'green', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/elche_cf/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/elche_cf/third_2025.webp'), color: 'blue', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/elche_cf/home_2025.webp'), color: '#16a34a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/elche_cf/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/elche_cf/third_2025.webp'), color: '#1e3a8a', name: 'Third' }
   },
   deportivo_alaves: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/deportivo_alaves/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/deportivo_alaves/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/deportivo_alaves/third_2025.webp'), color: 'red', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/deportivo_alaves/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/deportivo_alaves/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/deportivo_alaves/third_2025.webp'), color: '#dc2626', name: 'Third' }
   },
   getafe_cf: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/getafe_cf/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/getafe_cf/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/getafe_cf/third_2025.webp'), color: 'red', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/getafe_cf/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/getafe_cf/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/getafe_cf/third_2025.webp'), color: '#dc2626', name: 'Third' }
   },
   real_oviedo: {
-    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_oviedo/home_2025.webp'), color: 'blue', name: 'Home' },
-    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_oviedo/away_2025.webp'), color: 'white', name: 'Away' },
-    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_oviedo/third_2025.webp'), color: 'red', name: 'Third' }
+    home: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_oviedo/home_2025.webp'), color: '#1e3a8a', name: 'Home' },
+    away: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_oviedo/away_2025.webp'), color: '#ffffff', name: 'Away' },
+    third: { src: getAzureUrl('jerseys', 'jerseys/la_liga_jerseys/real_oviedo/third_2025.webp'), color: '#dc2626', name: 'Third' }
   },
   // Premier League
   liverpool: {
